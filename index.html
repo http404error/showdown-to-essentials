@@ -6,6 +6,11 @@
         <td>
           <h1>Showdown Text (paste here)</h1>
           <textarea id="showdown-text" style="width: 300px; height: 150px; margin-left: auto; margin-right: 0;"></textarea>
+          <ul>
+            <li>This is a little side project you might find useful. Paste a team (say from pokepastes) into the left box and press Convert.</li>
+            <li>Dynamax and Tera are currently ignored because they require plugins to function in Essentials.</li>
+            <li>Happiness are Hidden Power are currently ignored because I didn't think they were important enough yet, and also Hidden Power has some differences between vanilla Essentials and Showdown.</li>
+          </ul>
         </td>
         <td>
           <button id="convert" style="margin: auto; margin-top: 150px;">Convert</button>
@@ -13,6 +18,10 @@
         <td>
           <h1>Essentials Text</h1>
           <textarea id="essentials-text" style="width: 300px; height: 150px; margin-left: 0; margin-right: auto;"></textarea>
+          <ul>
+            <li>Note that form recognition isn't implemented yet, so for example you might get GOLEM-ALOLA as output. You'll need to remove -ALOLA and add Form = 1 yourself.</li>
+            <li>IVs are not currently assumed to be maxed. You might want to add this line yourself: IV = 31,31,31,31,31,31</li>
+          </ul>
         </td>
       </tr>
     </table>
