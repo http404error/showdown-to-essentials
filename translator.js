@@ -149,6 +149,7 @@ function to_sym(str) {
 }
 
 function poke_to_essentials(p) {
+  output = ""
   output += "Pokemon = ${p.species},${p.level}\n";
   if (p.name) {
     output += "    Name = ${p.name}\n";
@@ -181,6 +182,7 @@ function poke_to_essentials(p) {
   if (p.pokeball) {
     output += "    Ball = ${to_sym(p.pokeball)}\n";
   }
+  return output;
 }
 
 function convert() {
