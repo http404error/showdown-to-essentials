@@ -150,37 +150,37 @@ function to_sym(str) {
 
 function poke_to_essentials(p) {
   output = ""
-  output += "Pokemon = ${p.species},${p.level}\n";
+  output += "Pokemon = "+to_sym(p.species)+","+p.level+"\n";
   if (p.name) {
-    output += "    Name = ${p.name}\n";
+    output += "    Name = "+p.name+"\n";
   }
   var move_str = p.moves.map(to_sym).join(",");
-  output += "    Moves = ${move_str}\n";
+  output += "    Moves = "+move_str+"\n";
   if (p.ability) {
-    output += "    Ability = ${to_sym(p.ability)}\n";
+    output += "    Ability = "+to_sym(p.ability)+"\n";
   }
   if (p.item) {
-    output += "    Item = ${to_sym(p.item)}\n";
+    output += "    Item = "+to_sym(p.item)+"\n";
   }
   if (p.gender) {
-    output += "    Gender = ${p.gender}\n";
+    output += "    Gender = "+p.gender+"\n";
   }
   if (p.nature) {
-    output += "    Nature = ${to_sym(p.nature)}\n";
+    output += "    Nature = "+to_sym(p.nature)+"\n";
   }
   if (p.ivs) {
     var iv_array = [p.ivs['hp'],p.ivs['atk'],p.ivs['def'],p.ivs['spe'],p.ivs['spa'],p.ivs['spd']];
-    output += "    IV = ${iv_array.join(",")}\n";
+    output += "    IV = "+iv_array.join(",")+"\n";
   }
   if (p.evs) {
     var iv_array = [p.evs['hp'],p.evs['atk'],p.evs['def'],p.evs['spe'],p.evs['spa'],p.evs['spd']];
-    output += "    EV = ${iv_array.join(",")}\n";
+    output += "    EV = "+iv_array.join(",")+"\n";
   }
   if (p.shiny) {
     output += "    Shiny = true\n";
   }
   if (p.pokeball) {
-    output += "    Ball = ${to_sym(p.pokeball)}\n";
+    output += "    Ball = "+to_sym(p.pokeball)+"\n";
   }
   return output;
 }
