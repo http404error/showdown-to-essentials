@@ -30,8 +30,7 @@ function importTeams(buffer) {
     if (line === '' || line === '---') {
       curSet = null;
     } else if (!curSet) {
-      curSet = { name: '', species: '', gender: '', level: 100 };
-      curSet.ivs = { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 };
+      curSet = { name: '', species: '', gender: '', level: 100, ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 } };
       team.push(curSet);
       var atIndex = line.lastIndexOf(' @ ');
       if (atIndex !== -1) {
