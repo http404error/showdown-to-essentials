@@ -145,7 +145,7 @@ function importTeams(buffer) {
 
 
 function to_sym(str) {
-  return str.toUpperCase().replaceAll(' ', '');
+  return str.toUpperCase().replaceAll(/[^0-9a-z]/gi, '');
 }
 
 function poke_to_essentials(p) {
