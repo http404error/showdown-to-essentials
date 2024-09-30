@@ -124,15 +124,15 @@ function importTeams(buffer) {
       if (line.substr(0, 1) === ' ') line = line.substr(1);
       if (!curSet.moves) curSet.moves = [];
       if (line.substr(0, 14) === 'Hidden Power [') {
-        var hptype = line.substr(14, line.length - 15);
-        line = 'Hidden Power ' + hptype;
-        var type = Dex.types.get(hptype);
-        if (!curSet.ivs && type) {
-          curSet.ivs = {};
-          for (var stat in type.HPivs) {
-            curSet.ivs[stat] = type.HPivs[stat];
-          }
-        }
+        // var hptype = line.substr(14, line.length - 15);
+        // line = 'Hidden Power ' + hptype;
+        // var type = Dex.types.get(hptype);
+        // if (!curSet.ivs && type) {
+        //   curSet.ivs = {};
+        //   for (var stat in type.HPivs) {
+        //     curSet.ivs[stat] = type.HPivs[stat];
+        //   }
+        // }
       }
       if (line === 'Frustration' && curSet.happiness === undefined) {
         curSet.happiness = 0;
